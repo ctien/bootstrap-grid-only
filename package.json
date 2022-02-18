@@ -1,0 +1,26 @@
+{
+  "name": "bootstrap-grid-systerm-only",
+  "description": "The small library use only bootstrap grid",
+  "keywords": [
+    "css",
+    "sass",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web"
+  ],
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "dist/grid.css",
+  "sass": "src/index.scss",
+  "style": "dist/grid.css",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "dev": "yarn clean && sass src/index.scss:dist/grid.css --watch",
+    "build": "sass src/index.scss dist/grid.css --style compressed"
+  },
+  "devDependencies": {
+    "sass": "^1.49.8"
+  }
+}
