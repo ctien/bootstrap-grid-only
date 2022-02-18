@@ -10,7 +10,7 @@
     "framework",
     "web"
   ],
-  "version": "1.0.0",
+  "version": "1.0.3",
   "license": "MIT",
   "main": "dist/grid.css",
   "sass": "src/index.scss",
@@ -18,8 +18,13 @@
   "scripts": {
     "clean": "rm -rf dist",
     "dev": "yarn clean && sass src/index.scss:dist/grid.css --watch",
-    "build": "sass src/index.scss dist/grid.css --style compressed"
+    "build": "sass src/index.scss dist/grid.css --style compressed",
+    "deploy": "yarn clean && yarn build && npm publish"
   },
+  "files": [
+    "dist/{css}/*.{css,map}",
+    "scss/**/*.scss"
+  ],
   "devDependencies": {
     "sass": "^1.49.8"
   }
